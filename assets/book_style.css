@@ -3,6 +3,7 @@
 body{
 	top: 0;
 	bottom: 0;
+	background-color:#dee6ed !important;
 }
 header{
 	background:url(../images/header.jpg);
@@ -151,7 +152,6 @@ header{
 .header-user-menu{
 	position: relative;
 	float:right;
-	background-color:#3a3c3e;
 	width:75px;
 	height:40px;
 	border-radius:2px;
@@ -196,7 +196,7 @@ header{
 	padding:5px;
 }
 .header-user-menu ul :hover{
-	background-color:#666;
+	background-color:#4e5d6c;
 }
 
 .header-user-menu ul li a:hover{
@@ -243,6 +243,28 @@ header{
 #news_xyz h2{
 	font-size:40px;
 }
+
+
+/*===========GALLERY==========*/
+.gallery{
+	background-color:#dee6ed;
+	margin-top:-30px;
+	width:100%;
+	color:#121a21;
+}
+#jumbo_gal{
+	background-color:transparent;
+	text-align:center;
+}
+/*==========/GALLERY===========*/
+/*GUNIJON KOHEN*/
+#gunijon_kohen{
+	background: url(../images/quote-bg.jpg) 50%  0 repeat fixed;
+	-webkit-background-size: 100% 100%;
+	width:100%;
+	height:150px;
+}
+
 /*FOOTER*/
 .footer_zis_style{
 	font-size:120%;
@@ -262,6 +284,7 @@ header{
 		
 		margin-right: 10%;
 }
+
 
 /* Making responsive. */
 @media all and (max-width: 1170px) {
@@ -283,13 +306,10 @@ header{
 		background: black; 
 		padding: 15px;
 		width: 100%;
-		height: auto;
+		height: 170px;
 	}
-	
 	#search_form{
-		width:100%;
 		height:50px;
-		
 		}
 	#news_menu{
 		width:100%;
@@ -321,7 +341,7 @@ header{
 	.header-user-menu{
 		position: absolute;
 		margin-left:0;
-		top:150px;
+		top:100px;
 	}
 	.header-search .header-limiter form {
 		position: absolute;
