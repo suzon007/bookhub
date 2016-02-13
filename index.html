@@ -5,8 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="keywords" content="book, books, exchange university book" />
 <!--CSS-->
+
 <link type="text/css" rel="stylesheet" href="assets/book_style.css">
 <link type="text/css" rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 <!--CSS END-->
 
@@ -14,18 +16,71 @@
 </head>
 
 <body>
+<!--=======MODAL===========-->
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" id="join_modal">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+       <div class="modal-header login_modal_header">
+        		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        		<h2 class="modal-title" id="myModalLabel">Login to Your Account</h2>
+      		</div>
+      		<div class="modal-body login-modal">
+      			<p class="text-center"><strong>booHUB<strong> is a exchange and sell platform of old and used book for educational purpose</p>
+      			<br/>
+      			<div class="clearfix"></div>
+      			<div id='social-icons-conatainer'>
+	        		<div class='modal-body-left'>
+	        			<div class="form-group">
+		              		<input type="text" id="username" placeholder="Email" value="" class="form-control login-field">
+		              		<i class="fa fa-user login-field-icon"></i>
+		            	</div>
+
+		            	<div class="form-group">
+		            	  	<input type="password" id="login-pass" placeholder="Password" value="" class="form-control login-field">
+		              		<i class="fa fa-lock login-field-icon"></i>
+		            	</div>
+
+		            	<a href="#" class="btn btn-success modal-login-btn">Login</a>
+		            	<a href="#" class="login-link text-center"><span>Lost your password?</span></a>
+	        		</div>
+
+	        		<div class='modal-body-right'>
+	        			<div class="modal-social-icons">
+	        				<a href='#' class="btn btn-primary facebook"> <i class="fa fa-facebook modal-icons"></i> Login with FB </a>
+	        				<a href='#' class="btn btn-danger google"> <i class="fa fa-google-plus modal-icons"></i> Login with G+ </a>
+	        			</div> 
+	        		</div>	
+	        	</div>																												
+        		<div class="clearfix"></div>
+
+        		<div class="form-group modal-register-btn">
+        			<button class="btn btn-default"> New User Please Register</button>
+        		</div>
+      		</div>
+    </div>
+  </div>
+</div>
+<!--======/MODAL===========-->
 <header>
   <div class="header-search">
     <div class="header-limiter">
       <div id="site_logo">
         <h1><a href="#">book<span>HUB</span></a></h1>
       </div>
-      <div class="header-user-menu navbar-right bg-success" id="user"> <img src="images/users/zis.jpg" alt="User Image"/>
+      <div class="header-user-menu navbar-right bg-success" id="user"><b>JOIN</b>
+        <ul>
+          <li><a href="#" data-toggle="modal" data-target=".bs-example-modal-lg">LOGIN<i class="fa fa-sign-in pull-right"></i></a></li>
+          <li><a href="#">SIGN UP <i class="fa fa-user-plus pull-right"></i></a></li>
+        </ul>
+      </div>
+      <!--ELSE IF-->
+      <!--<div class="header-user-menu navbar-right bg-success" id="user"> <img src="images/users/zis.jpg" alt="User Image"/>
         <ul>
           <li><a href="#">Zahidul Islam Suzon</a></li>
           <li><a href="#">Logout</a></li>
         </ul>
-      </div>
+      </div>-->
+       <!--ELSE IF-->
       <div id="news_menu">
         <nav class="navbar-right"> <a href="#"><b>NEWS</b></a> </nav>
       </div>
@@ -45,15 +100,42 @@
   <!--================================SUBMENU===========================================-->
   <div id="sub-menu">
     <div class="btn-group btn-group-justified" role="group" aria-label="...">
-      <div class="btn-group" role="group">
-        <button type="button" class="btn btn-success">BUY</button>
-      </div>
-      <div class="btn-group" role="group" >
-        <button type="button" class="btn btn-primary">SELL</button>
-      </div>
-      <div class="btn-group" role="group">
-        <button type="button" class="btn btn-success">EXCHANGE</button>
-      </div>
+      <div class="btn-group dropup">
+      <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="caret"></span>
+    <span class="sr-only">Toggle Dropdown</span>
+  </button>  
+  <ul class="dropdown-menu">
+    <li><a href="#">University Wise</a></li>
+    <li><a href="#">Area Wise</a></li>
+    <li><a href="#">Department Wise</a></li>
+  </ul>
+    <button type="button" class="btn btn-success">BUY</button>
+</div>
+     <div class="btn-group dropup">
+      <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="caret"></span>
+    <span class="sr-only">Toggle Dropdown</span>
+  </button>  
+  <ul class="dropdown-menu">
+    <li><a href="#">University Wise</a></li>
+    <li><a href="#">Area Wise</a></li>
+    <li><a href="#">Department Wise</a></li>
+  </ul>
+    <button type="button" class="btn btn-primary">EXCHANGE</button>
+</div>
+      <div class="btn-group dropup">
+      <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="caret"></span>
+    <span class="sr-only">Toggle Dropdown</span>
+  </button>  
+  <ul class="dropdown-menu">
+    <li><a href="#">University Wise</a></li>
+    <li><a href="#">Area Wise</a></li>
+    <li><a href="#">Department Wise</a></li>
+  </ul>
+    <button type="button" class="btn btn-success">SELL</button>
+</div>
     </div>
   </div>
   <!--================================/SUBMENU=========================================-->
